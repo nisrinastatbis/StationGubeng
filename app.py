@@ -6,7 +6,7 @@ list_gender = ['', 'male', 'female']
 lis_pelayanan_lainnya = ['', 'Makanan', 'Selimut', 'Bantal','Taksi', 'Asuransi']
 
 conn = st.connection("postgresql", type="sql", 
-                     url="postgresql://nisrina1802:FA6LmqkOR3KS@ep-fancy-thunder-58673639.us-east-2.aws.neon.tech/web")
+                     url="postgresql://nisrina1802:************@ep-fancy-thunder-58673639.us-east-2.aws.neon.tech/web")
 with conn.session as session:
     query = text('CREATE TABLE IF NOT EXISTS STATION (id serial, nama text, gender text, \
                                                        tanggal_keberangkatan date, asal_stasiun text, tujuan_stasiun text, kelas text, nomor_kursi integer, pelayanan_lainnya text);')
