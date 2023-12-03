@@ -10,7 +10,7 @@ conn = st.connection("postgresql", type="sql",
 with conn.session as session:
     query = text('CREATE TABLE IF NOT EXISTS STATION (id serial, nama text, gender text, \
                                                        tanggal_keberangkatan date, asal_stasiun text, tujuan_stasiun text, kelas text, nomor_kursi integer, pelayanan_lainnya text);')
-    session.execute(query)b
+    session.execute(query)
 
 st.header('GUBENG STATION DATA MANAGEMENT SYSTEM')
 page = st.sidebar.selectbox("Pilih Menu", ["View Data","Edit Data"])
