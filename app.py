@@ -55,7 +55,7 @@ if page == "Edit Data":
                 with col1:
                     if st.form_submit_button('UPDATE'):
                         with conn.session as session:
-                            query = text('UPDATE schedule \
+                            query = text('UPDATE station \
                                           SET nama=:1, gender=:2, tanggal_keberangkatan=:3, asal_stasiun=:4, \
                                           tujuan_stasiun=:5, kelas=:6, nomor_kursi=:7, pelayanan_lainnya=:8 \
                                           WHERE id=:9;')
